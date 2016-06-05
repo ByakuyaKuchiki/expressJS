@@ -2,6 +2,9 @@ var express = require('express');
 var app = express();
 var port = 3000;
 
+//setting port
+app.set('port', 3000);
+
 app.get('/name/:user_name', function(req, res){
   res.status(200);
   res.set('content-type', 'text/html');
