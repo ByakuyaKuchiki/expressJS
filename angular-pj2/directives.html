@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+  <body>
+    <div ng-app="myApp">
+      <w3-text-directive></w3-text-directive>
+      <div test-directive-d1></div>
+      <div class="w2-text-directive"></div>
+    </div>
+
+    <script>
+    var app = angular.module("myApp", []);
+    app.directive("w3TextDirective", function(){
+      return{
+        template: "<h1> Made by a directive </h1>"
+      };
+    });
+    app.directive("testDirectiveD1", function(){
+      return{
+        template: "<h1> Made by a directive attribute </h1>"
+      };
+    });
+    app.directive("w2TextDirective", function(){
+      return{
+        restrict: "C",
+        template: "<h1> Made by a directive restricted to class</h1>"
+      };
+    });
+    </script>
+  </body>
+</html>
